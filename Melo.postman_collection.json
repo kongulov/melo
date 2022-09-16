@@ -1,0 +1,724 @@
+{
+	"info": {
+		"_postman_id": "ef64bdd4-0a1c-4c56-84b3-00775b744efb",
+		"name": "Melo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "manager@melo.test",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "manager",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://melo.test/api/login",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "About User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzI2NzE4MiwiZXhwIjoxNjYzMjcwNzgyLCJuYmYiOjE2NjMyNjcxODIsImp0aSI6IjNXaFppMHAzZ2Q5UjlYY1AiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.khhq7OqWInnAgNuR62kc4D5hBie1r56TL8t-VNHKj9Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/me",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzI2NzE4MiwiZXhwIjoxNjYzMjcwNzgyLCJuYmYiOjE2NjMyNjcxODIsImp0aSI6IjNXaFppMHAzZ2Q5UjlYY1AiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.khhq7OqWInnAgNuR62kc4D5hBie1r56TL8t-VNHKj9Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/logout",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyMzAyOCwiZXhwIjoxNjYzMzI2NjI4LCJuYmYiOjE2NjMzMjMwMjgsImp0aSI6InRpVWlKeThiNHlpZU1vUjAiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Pd7ZK3n4QIGfUMddgj1tZtCTOdAe1heOtnrJHBPK0rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/roles",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMxMzkyNywiZXhwIjoxNjYzMzE3NTI3LCJuYmYiOjE2NjMzMTM5MjcsImp0aSI6Ind3anl2V1VzNWV2WENKZ3MiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.RBdIvPnZ6ADs-5P6Sck9sqywnTZB6ob-0_rZOlJCwtY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/roles/3",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMxMzkyNywiZXhwIjoxNjYzMzE3NTI3LCJuYmYiOjE2NjMzMTM5MjcsImp0aSI6Ind3anl2V1VzNWV2WENKZ3MiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.RBdIvPnZ6ADs-5P6Sck9sqywnTZB6ob-0_rZOlJCwtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://melo.test/api/roles",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMxMzkyNywiZXhwIjoxNjYzMzE3NTI3LCJuYmYiOjE2NjMzMTM5MjcsImp0aSI6Ind3anl2V1VzNWV2WENKZ3MiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.RBdIvPnZ6ADs-5P6Sck9sqywnTZB6ob-0_rZOlJCwtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://melo.test/api/roles/4",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMxMzkyNywiZXhwIjoxNjYzMzE3NTI3LCJuYmYiOjE2NjMzMTM5MjcsImp0aSI6Ind3anl2V1VzNWV2WENKZ3MiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.RBdIvPnZ6ADs-5P6Sck9sqywnTZB6ob-0_rZOlJCwtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://melo.test/api/roles/4",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attach Permission to Role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyODcxOSwiZXhwIjoxNjYzMzMyMzE5LCJuYmYiOjE2NjMzMjg3MTksImp0aSI6IlVZelF5WTRaWFZFQkhJQWwiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UnIl_anZ-pVoU1FI6Rj1xjy_93P9ideb5i3o-Y6hiwA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/roles/3/permission/17/attach",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"3",
+								"permission",
+								"17",
+								"attach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detach Permission to Role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyODcxOSwiZXhwIjoxNjYzMzMyMzE5LCJuYmYiOjE2NjMzMjg3MTksImp0aSI6IlVZelF5WTRaWFZFQkhJQWwiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UnIl_anZ-pVoU1FI6Rj1xjy_93P9ideb5i3o-Y6hiwA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/roles/3/permission/17/detach",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"3",
+								"permission",
+								"17",
+								"detach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attach User to Role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyODcxOSwiZXhwIjoxNjYzMzMyMzE5LCJuYmYiOjE2NjMzMjg3MTksImp0aSI6IlVZelF5WTRaWFZFQkhJQWwiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UnIl_anZ-pVoU1FI6Rj1xjy_93P9ideb5i3o-Y6hiwA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/roles/2/user/3/attach",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"2",
+								"user",
+								"3",
+								"attach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detach User to Role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyODcxOSwiZXhwIjoxNjYzMzMyMzE5LCJuYmYiOjE2NjMzMjg3MTksImp0aSI6IlVZelF5WTRaWFZFQkhJQWwiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UnIl_anZ-pVoU1FI6Rj1xjy_93P9ideb5i3o-Y6hiwA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/roles/2/user/3/detach",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"2",
+								"user",
+								"3",
+								"detach"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permission",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyMzAyOCwiZXhwIjoxNjYzMzI2NjI4LCJuYmYiOjE2NjMzMjMwMjgsImp0aSI6InRpVWlKeThiNHlpZU1vUjAiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Pd7ZK3n4QIGfUMddgj1tZtCTOdAe1heOtnrJHBPK0rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/permissions",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyMzAyOCwiZXhwIjoxNjYzMzI2NjI4LCJuYmYiOjE2NjMzMjMwMjgsImp0aSI6InRpVWlKeThiNHlpZU1vUjAiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Pd7ZK3n4QIGfUMddgj1tZtCTOdAe1heOtnrJHBPK0rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/permissions/3",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"permissions",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyMzAyOCwiZXhwIjoxNjYzMzI2NjI4LCJuYmYiOjE2NjMzMjMwMjgsImp0aSI6InRpVWlKeThiNHlpZU1vUjAiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Pd7ZK3n4QIGfUMddgj1tZtCTOdAe1heOtnrJHBPK0rE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test.test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://melo.test/api/permissions",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyMzAyOCwiZXhwIjoxNjYzMzI2NjI4LCJuYmYiOjE2NjMzMjMwMjgsImp0aSI6InRpVWlKeThiNHlpZU1vUjAiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Pd7ZK3n4QIGfUMddgj1tZtCTOdAe1heOtnrJHBPK0rE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test.test2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://melo.test/api/permissions/17",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"permissions",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyMzAyOCwiZXhwIjoxNjYzMzI2NjI4LCJuYmYiOjE2NjMzMjMwMjgsImp0aSI6InRpVWlKeThiNHlpZU1vUjAiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Pd7ZK3n4QIGfUMddgj1tZtCTOdAe1heOtnrJHBPK0rE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://melo.test/api/permissions/17",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"permissions",
+								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyODcxOSwiZXhwIjoxNjYzMzMyMzE5LCJuYmYiOjE2NjMzMjg3MTksImp0aSI6IlVZelF5WTRaWFZFQkhJQWwiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UnIl_anZ-pVoU1FI6Rj1xjy_93P9ideb5i3o-Y6hiwA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/posts",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMyODcxOSwiZXhwIjoxNjYzMzMyMzE5LCJuYmYiOjE2NjMzMjg3MTksImp0aSI6IlVZelF5WTRaWFZFQkhJQWwiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UnIl_anZ-pVoU1FI6Rj1xjy_93P9ideb5i3o-Y6hiwA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://melo.test/api/posts/1",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMzMDUyOCwiZXhwIjoxNjYzMzM0MTI4LCJuYmYiOjE2NjMzMzA1MjgsImp0aSI6IlpkZUZLOG4yNXNoT1FLdG0iLCJzdWIiOiIzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.cPqFKKXx1FJNEysoSNn0S64HUx-dVtzpgs-4lK4rsFo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "content",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://melo.test/api/posts",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMzMDUyOCwiZXhwIjoxNjYzMzM0MTI4LCJuYmYiOjE2NjMzMzA1MjgsImp0aSI6IlpkZUZLOG4yNXNoT1FLdG0iLCJzdWIiOiIzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.cPqFKKXx1FJNEysoSNn0S64HUx-dVtzpgs-4lK4rsFo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "tt1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "cont",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://melo.test/api/posts/1",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWVsby50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY2MzMzMDUyOCwiZXhwIjoxNjYzMzM0MTI4LCJuYmYiOjE2NjMzMzA1MjgsImp0aSI6IlpkZUZLOG4yNXNoT1FLdG0iLCJzdWIiOiIzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.cPqFKKXx1FJNEysoSNn0S64HUx-dVtzpgs-4lK4rsFo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://melo.test/api/posts/3",
+							"protocol": "http",
+							"host": [
+								"melo",
+								"test"
+							],
+							"path": [
+								"api",
+								"posts",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
