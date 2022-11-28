@@ -1,8 +1,9 @@
+```
 composer i
 php artisan key:generate
 php artisan jwt:secret
 php artisan migrate --seed
-
+```
 
 В сидере прописаны:
 
